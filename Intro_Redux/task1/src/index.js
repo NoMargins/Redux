@@ -5,21 +5,21 @@ const DECREMENT = 'COUNTER/DECREMENT';
 
 const incrementAction = () => {
 	return {
-		type: 'INCREMENT',
+		type: INCREMENT,
 	};
 };
 
 const decrementAction = () => {
 	return {
-		type: 'DECREMENT',
+		type: DECREMENT,
 	};
 };
 
 const counterReducer = (state = 0, action) => {
 	switch (action.type) {
-		case 'INCREMENT':
+		case INCREMENT:
 			return state + 1;
-		case 'DECREMENT':
+		case DECREMENT:
 			return state - 1;
 		default:
 			return state;
