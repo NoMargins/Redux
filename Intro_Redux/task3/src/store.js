@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import { usersReducer } from './users.reducer';
+import usersReducer from './users.reducer';
 
 export const initialState = {
 	usersList: [],

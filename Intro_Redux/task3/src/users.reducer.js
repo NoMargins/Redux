@@ -1,7 +1,7 @@
 import { initialState } from './store.js';
 import { ADDUSER, REMOVEUSER } from './users.actions.js';
 
-export const usersReducer = (state = initialState, action) => {
+const usersReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADDUSER:
 			return {
@@ -17,3 +17,5 @@ export const usersReducer = (state = initialState, action) => {
 			return state;
 	}
 };
+
+export default usersReducer;
