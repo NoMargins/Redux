@@ -1,10 +1,11 @@
 import { ADD_PRODUCT, REMOVE_PRODUCT } from './cart.actions';
+import { initialState } from './store.js';
 
-const initialState = {
-	products: [],
-};
+// const initialState = {
+// 	products: [],
+// };
 
-const cartReducer = (state = initialState, action) => {
+const cartReducer = (state = initialState.cart, action) => {
 	switch (action.type) {
 		case ADD_PRODUCT:
 			const newCart = state.products.concat(action.payload.productData);
