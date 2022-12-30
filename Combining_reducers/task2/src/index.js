@@ -1,4 +1,4 @@
-import store from './store.js';
+import store from './counter.js';
 import { increment, decrement, reset } from './counter.js';
 
 store.dispatch(increment());

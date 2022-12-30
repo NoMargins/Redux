@@ -1,3 +1,5 @@
+import { createStore } from 'redux';
+
 const INCREMENT = 'COUNTER/INCREMENT';
 const DECREMENT = 'COUNTER/DECREMENT';
 const RESET = 'COUNTER/RESET';
@@ -35,4 +37,9 @@ const counterReducer = (state = 0, action) => {
 	}
 };
 
-export default counterReducer;
+const store = createStore(
+	counterReducer,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+export default store;
