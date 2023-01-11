@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { increment, decrement, reset } from './counter.actions';
+import * as counterActions from './counter.actions.js';
 
 const Counter = ({ counter, increment, decrement, reset }) => {
 	return (
@@ -9,8 +9,7 @@ const Counter = ({ counter, increment, decrement, reset }) => {
 				-
 			</button>
 			<span className='counter__value' onClick={reset}>
-				{' '}
-				{counter}{' '}
+				{counter}
 			</span>
 			<button className='counter__button' onClick={increment}>
 				+
@@ -25,12 +24,10 @@ const mapState = (state) => {
 	};
 };
 
-const mapDispatch = (dispatch) => {
-	return {
-		increment: () => dispatch(increment()),
-		decrement: () => dispatch(decrement()),
-		reset: () => dispatch(reset()),
-	};
+const mapDispatch = {
+	increment: counterActions.increment,
+	decrement: counterActions.decrement,
+	reset: counterActions.reset,
 };
 
 const connector = connect(mapState, mapDispatch);
