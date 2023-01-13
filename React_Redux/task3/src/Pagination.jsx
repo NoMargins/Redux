@@ -11,18 +11,18 @@ class Pagination extends React.Component {
 			<div className='pagination'>
 				<button
 					className='btn'
-					onClick={isPrevPageAvailable ? goPrev : null}
+					onClick={goPrev}
 					disabled={!isPrevPageAvailable}
 				>
-					{isPrevPageAvailable ? '←' : ''}
+					{isPrevPageAvailable && '←'}
 				</button>
 				<span className='pagination__page'>{currentPage + 1}</span>
 				<button
 					className='btn'
-					onClick={isNextPageAvailable ? goNext : null}
+					onClick={goNext}
 					disabled={!isNextPageAvailable}
 				>
-					{isNextPageAvailable ? '→' : ''}
+					{isNextPageAvailable && '→'}
 				</button>
 			</div>
 		);
