@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import './users.scss';
 
 const User = ({ usersList }) => {
@@ -15,10 +14,4 @@ const User = ({ usersList }) => {
 	);
 };
 
-const mapState = (state) => {
-	return {
-		usersList: state.usersList,
-	};
-};
-
-export default connect(mapState)(User);
+export default User;
