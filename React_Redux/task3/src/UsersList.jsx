@@ -1,6 +1,6 @@
 import React from 'react';
 import User from './users/User.jsx';
-import Pagination from './pagination/Pagination.jsx';
+import Pagination from './Pagination.jsx';
 import { connect } from 'react-redux';
 import * as usersActions from './users/users.actions';
 
@@ -19,7 +19,11 @@ class UsersList extends React.Component {
 					goNext={goNext}
 					goPrev={goPrev}
 				/>
-				<User usersList={usersList} />
+				<ul className='users'>
+					{usersList.map((user) => (
+						<User key={user.id} {...user} />
+					))}
+				</ul>
 			</>
 		);
 	}
