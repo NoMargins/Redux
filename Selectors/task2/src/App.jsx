@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import TransferList from './TransferList';
-import store from './options/store.js';
+import TransferList from './options/TransferList';
+import store from './options/store/store.js';
 import './index.scss';
 
 const App = () => {
