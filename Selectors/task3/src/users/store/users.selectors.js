@@ -14,7 +14,7 @@ const filteredUsersSelector = createSelector(
 		return filterText === ''
 			? allUsersArray
 			: allUsersArray.filter((user) =>
-					user.name.toLowerCase().includes(filterText)
+					user.name.toLowerCase().includes(filterText).toLowerCase()
 			  );
 	}
 );
