@@ -15,7 +15,7 @@ const Weather = ({ weatherData, downloadWeatherData }) => {
 							<li className='city' key={cityData.id}>
 								<span className='city__name'>{cityData.name}</span>
 								<span className='city__temperature'>
-									{cityData.temperature}
+									{cityData.temperature} F
 								</span>
 							</li>
 						);
